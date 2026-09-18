@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>内推结对子项目｜HR执行宣贯</title>
+  <meta name="description" content="内推结对子项目目的、两周动作、沟通话术、保密注意事项与重点职位清单。">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1739'/%3E%3Ccircle cx='22' cy='24' r='8' fill='%23a9f04d'/%3E%3Ccircle cx='43' cy='39' r='8' fill='%235ee7f7'/%3E%3Cpath d='M27 29l10 7' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --ink:#0b1739;
+      --ink-2:#263452;
+      --muted:#64708a;
+      --paper:#f7f9fc;
+      --white:#fff;
+      --line:#dfe5ef;
+      --cyan:#5ee7f7;
+      --lime:#a9f04d;
+      --blue:#4f7cff;
+      --orange:#ffb15c;
+      --red:#ef5b6c;
+      --shadow:0 18px 50px rgba(11,23,57,.10);
+      --radius:24px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    button,input,select{font:inherit}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .nav{position:sticky;top:0;z-index:30;background:rgba(247,249,252,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(223,229,239,.85)}
+    .nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:800;letter-spacing:.02em}
+    .nav-links{display:flex;gap:22px;color:var(--ink-2);font-size:14px;font-weight:600}
+    .print-btn{border:0;border-radius:999px;background:var(--ink);color:white;padding:9px 16px;cursor:pointer}
+    .hero{background:var(--ink);color:white;min-height:560px;display:grid;align-items:center;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-160px;top:-220px;background:var(--cyan);opacity:.18}
+    .hero:after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;right:12%;bottom:-245px;background:var(--lime);opacity:.24}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.3fr .7fr;gap:80px;align-items:center;padding:80px 0}
+    .eyebrow{font-weight:800;color:var(--lime);letter-spacing:.14em;font-size:14px}
+    h1{font-size:clamp(42px,6vw,78px);line-height:1.08;margin:18px 0 26px;letter-spacing:-.04em}
+    .lead{font-size:clamp(18px,2vw,24px);color:#dce5ff;max-width:720px;margin:0}
+    .period{display:inline-flex;margin-top:36px;padding:10px 16px;border:1px solid rgba(255,255,255,.28);border-radius:999px;color:#fff;font-weight:700}
+    .focus-stack{display:grid;gap:14px}
+    .focus-item{padding:21px 22px;border-radius:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-size:18px;font-weight:700}
+    .focus-item b{display:block;color:var(--cyan);font-size:13px;letter-spacing:.1em;margin-bottom:4px}
+    section{padding:92px 0}
+    .section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:50px;margin-bottom:44px;align-items:end}
+    .kicker{font-size:14px;font-weight:800;color:var(--blue);letter-spacing:.12em;margin-bottom:10px}
+    h2{font-size:clamp(32px,4vw,52px);line-height:1.15;margin:0;letter-spacing:-.03em}
+    .section-desc{font-size:19px;color:var(--muted);margin:0;max-width:720px}
+    .purpose-flow{display:grid;grid-template-columns:1fr 80px 1fr 80px 1fr;align-items:stretch}
+    .purpose-block{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
+    .purpose-block .num{font-size:13px;font-weight:900;color:var(--blue);letter-spacing:.12em}
+    .purpose-block h3{font-size:25px;margin:14px 0 12px}
+    .purpose-block p{margin:0;color:var(--muted)}
+    .flow-mark{display:grid;place-items:center;font-size:34px;color:var(--blue)}
+    .timeline{display:grid;grid-template-columns:1fr 1fr;background:white;border:1px solid var(--line);border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}
+    .week{padding:42px 44px}
+    .week + .week{border-left:1px solid var(--line);background:#f1f5ff}
+    .week-label{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+    .week-label h3{font-size:28px;margin:0}
+    .date{font-size:14px;font-weight:800;color:var(--blue)}
+    .steps{display:grid;gap:18px}
+    .step{display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:start}
+    .step-index{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:white;font-weight:800;font-size:14px}
+    .step strong{display:block;font-size:18px;margin-bottom:3px}
+    .step p{margin:0;color:var(--muted)}
+    .method-banner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 30px;border-radius:20px;background:var(--lime);margin-bottom:30px}
+    .method-banner strong{font-size:24px}
+    .method-banner span{font-weight:700;color:#28430a}
+    .scripts{display:grid;grid-template-columns:1.08fr .92fr;gap:30px}
+    .script-main,.script-side{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
+    .script-title{font-size:14px;font-weight:900;color:var(--blue);letter-spacing:.1em;margin-bottom:16px}
+    .quote{font-size:20px;line-height:1.8;margin:0;color:var(--ink-2)}
+    .script-side{display:grid;gap:24px;align-content:start}
+    .script-piece + .script-piece{border-top:1px solid var(--line);padding-top:24px}
+    .script-piece h3{font-size:19px;margin:0 0 9px}
+    .script-piece p{margin:0;color:var(--muted)}
+    .guard{background:var(--ink);color:white}
+    .guard .kicker{color:var(--cyan)}
+    .guard .section-desc{color:#cbd5ed}
+    .guard-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:54px}
+    .before-list{display:grid;gap:18px}
+    .before-item{padding:20px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+    .before-item strong{display:block;color:var(--lime);font-size:14px;margin-bottom:4px}
+    .before-item span{font-size:18px}
+    .privacy{background:white;color:var(--ink);border-radius:28px;padding:36px}
+    .privacy h3{font-size:27px;margin:0 0 22px}
+    .privacy-row{display:grid;grid-template-columns:140px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--line)}
+    .privacy-row:first-of-type{border-top:0}
+    .privacy-row b{color:var(--blue)}
+    .privacy-row p{margin:0;color:var(--ink-2)}
+    .jobs-tools{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
+    .jobs-tools input,.jobs-tools select{border:1px solid var(--line);border-radius:12px;background:white;padding:12px 14px;color:var(--ink);min-width:180px}
+    .jobs-tools input{flex:1;min-width:260px}
+    .count{align-self:center;color:var(--muted);font-weight:700}
+    .table-wrap{overflow:auto;background:white;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+    table{width:100%;border-collapse:collapse;min-width:780px}
+    th,td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line)}
+    th{position:sticky;top:64px;background:#eef3ff;color:var(--ink);font-size:14px;z-index:2}
+    td{color:var(--ink-2)}
+    tbody tr:hover{background:#f8fbff}
+    tbody tr:last-child td{border-bottom:0}
+    .dept{font-weight:800;color:var(--ink)}
+    .tag{display:inline-block;border-radius:999px;padding:4px 9px;background:#eaf0ff;color:#3159be;font-size:13px;font-weight:700}
+    .footer{padding:34px 0 46px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:860px){
+      .nav-links{display:none}.hero-grid,.section-head,.scripts,.guard-grid{grid-template-columns:1fr}.hero-grid{gap:40px}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero{min-height:auto}section{padding:70px 0}}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.week,.script-main,.script-side,.privacy,.purpose-block{padding:24px}.method-banner{align-items:flex-start;flex-direction:column}.print-btn{display:none}}
+    @media print{.nav,.jobs-tools{display:none}.hero{min-height:auto}.hero-grid{padding:48px 0}section{padding:46px 0;break-inside:avoid}.guard{-webkit-print-color-adjust:exact;print-color-adjust:exact}.table-wrap{box-shadow:none;overflow:visible}th{position:static}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">内推结对子项目</a>
+      <div class="nav-links"><a href="#purpose">项目目的</a><a href="#actions">两周动作</a><a href="#talk">沟通话术</a><a href="#guard">注意事项</a><a href="#jobs">职位List</a></div>
+      <button class="print-btn" type="button" onclick="window.print()">打印 / 导出PDF</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">HR × BP × 重点主管</div>
+        <h1>内推结对子<br>项目执行宣贯</h1>
+        <p class="lead">一起运营部门重点人群，从他们熟悉的主管、销冠和优秀同行中，发现适配各业务板块的高潜候选人。</p>
+        <span class="period">执行周期　2026.09.18 — 2026.10.30</span>
+      </div>
+      <div class="focus-stack" aria-label="项目重点">
+        <div class="focus-item"><b>重点人群</b>状态好、业绩好的主管优先</div>
+        <div class="focus-item"><b>触达方式</b>电话或面对面深聊</div>
+        <div class="focus-item"><b>最终结果</b>明确线索、匹配岗位、持续推进</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="purpose">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">01 项目目的</div><h2>共同运营重点人群</h2></div>
+          <p class="section-desc">HR和BP协同了解重点主管的状态与人才圈层，再由HR完成触达、岗位匹配和候选人推进。</p>
+        </div>
+        <div class="purpose-flow">
+          <div class="purpose-block"><div class="num">STEP 01</div><h3>盘点重点主管</h3><p>优先选择当前状态好、业绩表现不错、熟悉行业人才的主管。</p></div>
+          <div class="flow-mark">›</div>
+          <div class="purpose-block"><div class="num">STEP 02</div><h3>打开人才圈层</h3><p>从过往同事、朋友、同行中盘点主管、销冠、产品技术和优秀人选。</p></div>
+          <div class="flow-mark">›</div>
+          <div class="purpose-block"><div class="num">STEP 03</div><h3>匹配业务机会</h3><p>候选人可以推荐至公司任何部门，由HR结合各主体重点需求完成匹配。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="actions">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">02 时间和动作</div><h2>这周建立联系<br>下周整理推进</h2></div>
+          <p class="section-desc">本周先完成背景对齐与首轮触达。下周补齐触达、整理线索、确认保密口径，并约定10月的深入沟通。</p>
+        </div>
+        <div class="timeline">
+          <div class="week">
+            <div class="week-label"><h3>这周</h3><span class="date">9月18日—20日</span></div>
+            <div class="steps">
+              <div class="step"><span class="step-index">1</span><div><strong>先和BP对齐</strong><p>了解主管近期状态、业绩表现、沟通注意事项和人才圈层。</p></div></div>
+              <div class="step"><span class="step-index">2</span><div><strong>完成首轮触达</strong><p>优先电话或面对面沟通，说明结对子安排及全公司可推荐范围。</p></div></div>
+              <div class="step"><span class="step-index">3</span><div><strong>一起打开职位List</strong><p>让主管看到各业务主体的重点岗位，再结合人脉盘点人选。</p></div></div>
+              <div class="step"><span class="step-index">4</span><div><strong>记录结果</strong><p>登记现成人选，或约定后续面对面、电话深聊时间。</p></div></div>
+            </div>
+          </div>
+          <div class="week">
+            <div class="week-label"><h3>下周</h3><span class="date">9月21日—27日</span></div>
+            <div class="steps">
+              <div class="step"><span class="step-index">1</span><div><strong>补齐未触达人选</strong><p>与BP协同找到合适时点，完成遗漏主管的首次沟通。</p></div></div>
+              <div class="step"><span class="step-index">2</span><div><strong>整理与初筛线索</strong><p>核对候选人基本情况，在人才库检索已有简历和历史记录。</p></div></div>
+              <div class="step"><span class="step-index">3</span><div><strong>确认推荐披露口径</strong><p>逐一确认是否可透露主管推荐，登记保密要求。</p></div></div>
+              <div class="step"><span class="step-index">4</span><div><strong>约定深聊时间</strong><p>针对暂时无人选的主管，预约10月1日—15日电话或面谈。</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="talk">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">03 沟通话术</div><h2>电话或面对面触达</h2></div>
+          <p class="section-desc">文字适合建立联系和发送资料。人选盘点建议通过电话或面对面完成，便于顺着主管经历逐步追问。</p>
+        </div>
+        <div class="method-banner"><strong>建议沟通时长：10—15分钟</strong><span>带着职位List一起看，边聊边匹配</span></div>
+        <div class="scripts">
+          <article class="script-main">
+            <div class="script-title">初次沟通参考</div>
+            <p class="quote">“XX，最近招聘这边安排我跟你结对子啦。我们现在重点在找主管、销冠、产品技术和一些优秀人选，公司任何一个部门都可以推荐。<br><br>我把在招职位List打开给你看一下，里面有各个主体目前的重点需求。你结合之前的同事、朋友或者同行想一想，有没有能力不错、可以聊聊的人？你先给我姓名、微信或者其他联系方式就可以，后续匹配和沟通我来跟进。”</p>
+          </article>
+          <aside class="script-side">
+            <div class="script-piece"><h3>暂时没有人选</h3><p>“没事，我再约你十来分钟一起捋一捋。我们可以从你之前的公司、团队和岗位经历开始回忆，电话或面对面都可以。”</p></div>
+            <div class="script-piece"><h3>岗位有疑问</h3><p>先说明岗位职责、任职要求、工作地点和薪资范围，让主管更准确地匹配人选。</p></div>
+            <div class="script-piece"><h3>询问奖金分配</h3><p>P6/M1及以上岗位成功入职后，入职奖金部分由推荐人领取60%，结对跟进的HR/BP领取40%；转正奖金由推荐人全额领取。</p></div>
+            <div class="script-piece"><h3>已经提供线索</h3><p>确认姓名、基本情况和联系方式，说明HR将负责意愿确认、岗位匹配与后续进展同步。</p></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="guard" id="guard">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">04 注意事项</div><h2>先确认状态<br>再触达候选人</h2></div>
+          <p class="section-desc">主管状态和推荐披露口径需要在沟通前确认。候选人触达过程统一登记来源，按确认后的保密要求推进。</p>
+        </div>
+        <div class="guard-grid">
+          <div class="before-list">
+            <div class="before-item"><strong>BP确认 01</strong><span>近期工作状态、业绩表现和异动可能性</span></div>
+            <div class="before-item"><strong>BP确认 02</strong><span>性格特点、沟通偏好、敏感点和合适切入方式</span></div>
+            <div class="before-item"><strong>人群优先级</strong><span>优先跟进状态好、业绩表现不错的主管</span></div>
+            <div class="before-item"><strong>披露确认</strong><span>提前和主管确认是否可以透露推荐人信息</span></div>
+          </div>
+          <div class="privacy">
+            <h3>候选人触达口径</h3>
+            <div class="privacy-row"><b>允许透露推荐</b><p>可以说明主管推荐，并按常规内推流程登记推荐归属。</p></div>
+            <div class="privacy-row"><b>要求保密</b><p>全程不透露内推人信息，台账中单独标记保密要求。</p></div>
+            <div class="privacy-row"><b>人才库有简历</b><p>以“既有招聘渠道记录”作为联系来源，先确认近况和求职意向。</p></div>
+            <div class="privacy-row"><b>人才库无简历</b><p>先围绕岗位机会了解意向，初次沟通不主动透露探迹科技；候选人询问公司时如实说明。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jobs">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">05 职位LIST</div><h2>各主体重点岗位</h2></div>
+          <p class="section-desc">支持按关键词、部门和岗位类型筛选。沟通时建议让主管直接打开查看，再结合自己的人脉进行盘点。</p>
+        </div>
+        <div class="jobs-tools">
+          <input id="search" type="search" placeholder="搜索岗位、部门或城市">
+          <select id="department" aria-label="按部门筛选"><option value="">全部部门</option></select>
+          <select id="type" aria-label="按岗位类型筛选"><option value="">全部类型</option></select>
+          <span class="count" id="count">22个岗位</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>部门 / 主体</th><th>岗位类型</th><th>岗位名称</th><th>城市 / 区域</th></tr></thead>
+            <tbody id="jobRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-inner"><span>内推结对子项目执行宣贯</span><span>HR负责岗位匹配、意愿确认、推荐登记和后续流程跟进</span></div></footer>
+
+  <script>
+    const jobs = [
+      ['探迹智能','产研类','中 / 高 / 资深爬虫开发工程师','广州'],
+      ['探迹智能','产研类','数据产品经理','广州'],
+      ['探迹智能','产研类','AI Agent 产品经理','广州'],
+      ['探迹智能','销售类','直销主管','全国'],
+      ['探迹智能','销售类','客户顾问','广州'],
+      ['探迹智能','销售类','客户成功专员','广州'],
+      ['探迹智能','销售类','商务BD','广州'],
+      ['探迹智能','中台类','产品实施顾问','广州'],
+      ['产研','产研类','产品经理（连接/报表引擎）','广州'],
+      ['产研','产研类','产品经理（资深/专家）','广州'],
+      ['产研','产研类','后台开发工程师','广州'],
+      ['产研','产研类','PaaS产品经理','广州'],
+      ['产研','产研类','高级实施工程师','广州'],
+      ['汉数','销售类','客户经理','广州'],
+      ['总经办','职能类','政府关系','广州'],
+      ['产业招商','销售类','销售管理','广州'],
+      ['产业招商','中台类','售前工程师','广州'],
+      ['人力资源部','职能类','高招HR','广州'],
+      ['探讯','销售类','通信采购','广州'],
+      ['探讯','销售类','通信销售','广州'],
+      ['探域','中台类','运维工程师','广州'],
+      ['探域','销售类','销售主管','宁波/佛山']
+    ];
+    const rows = document.querySelector('#jobRows');
+    const search = document.querySelector('#search');
+    const department = document.querySelector('#department');
+    const type = document.querySelector('#type');
+    const count = document.querySelector('#count');
+    const unique = index => [...new Set(jobs.map(job => job[index]))];
+    unique(0).forEach(value => department.add(new Option(value,value)));
+    unique(1).forEach(value => type.add(new Option(value,value)));
+    function render(){
+      const q = search.value.trim().toLowerCase();
+      const filtered = jobs.filter(job => (!q || job.join(' ').toLowerCase().includes(q)) && (!department.value || job[0]===department.value) && (!type.value || job[1]===type.value));
+      rows.innerHTML = filtered.map(job => `<tr><td class="dept">${job[0]}</td><td><span class="tag">${job[1]}</span></td><td>${job[2]}</td><td>${job[3]}</td></tr>`).join('');
+      count.textContent = `${filtered.length}个岗位`;
+    }
+    [search,department,type].forEach(el => el.addEventListener('input',render));
+    render();
+  </script>
+</body>
+</html>
