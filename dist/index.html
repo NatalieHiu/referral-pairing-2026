@@ -36,14 +36,12 @@
     .hero{background:linear-gradient(135deg,#e7faf6 0%,#edf6ff 54%,#f8fbff 100%);color:var(--ink);min-height:560px;display:grid;align-items:center;position:relative;overflow:hidden;border-bottom:1px solid #dcefeb}
     .hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-160px;top:-220px;background:var(--cyan);opacity:.28}
     .hero:after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;right:12%;bottom:-245px;background:var(--lime);opacity:.32}
-    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.3fr .7fr;gap:80px;align-items:center;padding:80px 0}
+    .hero-grid{position:relative;z-index:1;padding:80px 0}
+    .hero-copy{max-width:930px}
     .eyebrow{font-weight:800;color:#2d8a96;letter-spacing:.14em;font-size:14px}
     h1{font-size:clamp(42px,6vw,78px);line-height:1.08;margin:18px 0 26px;letter-spacing:-.04em}
     .lead{font-size:clamp(18px,2vw,24px);color:#4e6a7e;max-width:720px;margin:0}
     .period{display:inline-flex;margin-top:36px;padding:10px 16px;border:1px solid #bcdedb;border-radius:999px;color:var(--ink);background:rgba(255,255,255,.62);font-weight:700}
-    .focus-stack{display:grid;gap:14px}
-    .focus-item{padding:21px 22px;border-radius:20px;background:rgba(255,255,255,.72);border:1px solid #d2e9e6;box-shadow:0 12px 30px rgba(72,135,150,.09);font-size:18px;font-weight:700}
-    .focus-item b{display:block;color:#3e92a0;font-size:13px;letter-spacing:.1em;margin-bottom:4px}
     section{padding:92px 0}
     .section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:50px;margin-bottom:44px;align-items:end}
     .kicker{font-size:14px;font-weight:800;color:var(--blue);letter-spacing:.12em;margin-bottom:10px}
@@ -107,7 +105,7 @@
     .footer{padding:34px 0 46px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
     .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     @media(max-width:860px){
-      .nav-links{display:none}.hero-grid,.section-head,.scripts,.guard-grid{grid-template-columns:1fr}.hero-grid{gap:40px}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero{min-height:auto}section{padding:70px 0}}
+      .nav-links{display:none}.section-head,.scripts,.guard-grid{grid-template-columns:1fr}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero{min-height:auto}section{padding:70px 0}}
     @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.week,.script-main,.script-side,.privacy,.purpose-block{padding:24px}.method-banner{align-items:flex-start;flex-direction:column}.print-btn{display:none}}
     @media print{.nav,.jobs-tools{display:none}.hero{min-height:auto}.hero-grid{padding:48px 0}section{padding:46px 0;break-inside:avoid}.guard{-webkit-print-color-adjust:exact;print-color-adjust:exact}.table-wrap{box-shadow:none;overflow:visible}th{position:static}}
   </style>
@@ -123,16 +121,11 @@
 
   <header class="hero" id="top">
     <div class="wrap hero-grid">
-      <div>
+      <div class="hero-copy">
         <div class="eyebrow">HR × BP × 重点主管</div>
         <h1>内推结对子<br>项目执行宣贯</h1>
         <p class="lead">一起运营部门重点人群，从他们熟悉的主管、销冠和优秀同行中，发现适配各业务板块的高潜候选人。</p>
         <span class="period">执行周期　2026.09.18 — 2026.10.30</span>
-      </div>
-      <div class="focus-stack" aria-label="项目重点">
-        <div class="focus-item"><b>重点人群</b>状态好、业绩好的主管优先</div>
-        <div class="focus-item"><b>触达方式</b>电话或面对面深聊</div>
-        <div class="focus-item"><b>最终结果</b>明确线索、匹配岗位、持续推进</div>
       </div>
     </div>
   </header>
