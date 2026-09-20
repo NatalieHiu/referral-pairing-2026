@@ -141,7 +141,19 @@
     @media(max-width:860px){
       .nav-links{display:none}.section-head,.scripts,.guard-grid,#talk .section-head,#talk .scripts,.reward-grid,.reward-split{grid-template-columns:1fr}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero,.reward,.summary{min-height:auto}.summary-path{grid-template-columns:1fr;max-width:520px}.summary-arrow{transform:rotate(90deg)}section,#talk{padding:70px 0}}
     @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.week,.script-main,.script-side,#talk .script-main,#talk .script-side,.privacy,.purpose-block,.reward-panel{padding:24px}.method-banner{align-items:flex-start;flex-direction:column}.summary-path{margin-top:36px}.print-btn{display:none}}
-    @media print{.nav,.jobs-tools{display:none}.hero{min-height:auto}.hero-grid{padding:48px 0}section{padding:46px 0;break-inside:avoid}.guard{-webkit-print-color-adjust:exact;print-color-adjust:exact}.table-wrap{box-shadow:none;overflow:visible}th{position:static}}
+    @media print{
+      @page{size:A4 landscape;margin:0}
+      *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+      html{scroll-behavior:auto}
+      body{background:#fff;line-height:1.45}
+      .nav,.jobs-tools{display:none!important}
+      .hero,section,.reward,.summary{min-height:210mm;padding:18mm 16mm;break-before:page;break-after:page;break-inside:auto}
+      .hero{break-before:auto;display:flex;align-items:center}
+      .hero-grid{padding:0}
+      section,#talk{padding-top:18mm;padding-bottom:18mm}
+      .table-wrap{box-shadow:none;overflow:visible}
+      th{position:static}
+    }
   </style>
 </head>
 <body>
