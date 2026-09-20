@@ -148,9 +148,9 @@
       @page{size:A4 landscape;margin:0}
       *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
       html{scroll-behavior:auto}
-      body{background:#fff;line-height:1.45}
+      body{background:#fff;line-height:1.45;min-width:1180px}
       .nav,.jobs-tools{display:none!important}
-      .hero,section,.reward,.summary{min-height:210mm;padding:18mm 16mm;break-before:page;break-after:page;break-inside:auto}
+      .hero,section,.reward,.summary{min-height:210mm;padding:16mm 14mm;break-before:page;break-after:page;break-inside:avoid;page-break-inside:avoid}
       .hero{break-before:auto;display:flex;align-items:center}
       .hero-grid{padding:0}
       #purpose .purpose-flow{grid-template-columns:1fr 42px 1fr 42px 1fr}
@@ -166,7 +166,7 @@
       .reward-split{grid-template-columns:1fr 1fr}
       .privacy-row{grid-template-columns:140px 1fr}
       #actions .timeline,#talk .scripts,#guard .guard-grid,#reward .reward-grid{break-inside:avoid;page-break-inside:avoid}
-      section,#talk{padding-top:18mm;padding-bottom:18mm}
+      section,#talk{padding-top:16mm;padding-bottom:16mm}
       .table-wrap{box-shadow:none;overflow:visible}
       th{position:static}
     }
