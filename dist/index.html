@@ -78,10 +78,11 @@
     .script-piece h3{font-size:19px;margin:0 0 9px}
     .script-piece p{margin:0;color:var(--muted)}
     #talk{padding:54px 0 58px}
-    #talk .section-head{grid-template-columns:.66fr 1.34fr;gap:36px;margin-bottom:28px}
+    #talk .section-head{grid-template-columns:.9fr 1.1fr;gap:36px;margin-bottom:28px}
+    #talk h2{white-space:nowrap}
     #talk .method-banner{padding:18px 28px;margin-bottom:22px}
     #talk .method-banner strong{font-size:22px}
-    #talk .scripts{grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr);gap:24px}
+    #talk .scripts{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:24px}
     #talk .script-main,#talk .script-side{padding:26px 30px}
     #talk .script-title{margin-bottom:12px}
     #talk .quote{font-size:18px;line-height:1.65}
@@ -141,7 +142,7 @@
     .footer{padding:34px 0 46px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
     .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     @media(max-width:860px){
-      .nav-links{display:none}.section-head,.scripts,.guard-grid,#talk .section-head,#talk .scripts,.reward-grid,.reward-split{grid-template-columns:1fr}#purpose h2{white-space:normal}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero,.reward,.summary{min-height:auto}.summary-path{grid-template-columns:1fr;max-width:520px}.summary-arrow{transform:rotate(90deg)}section,#talk{padding:70px 0}}
+      .nav-links{display:none}.section-head,.scripts,.guard-grid,#talk .section-head,#talk .scripts,.reward-grid,.reward-split{grid-template-columns:1fr}#purpose h2,#talk h2{white-space:normal}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero,.reward,.summary{min-height:auto}.summary-path{grid-template-columns:1fr;max-width:520px}.summary-arrow{transform:rotate(90deg)}section,#talk{padding:70px 0}}
     @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.week,.script-main,.script-side,#talk .script-main,#talk .script-side,.privacy,.purpose-block,.reward-panel{padding:24px}.method-banner{align-items:flex-start;flex-direction:column}.summary-path{margin-top:36px}.print-btn{display:none}}
     @media print{
       @page{size:A4 landscape;margin:0}
