@@ -74,6 +74,18 @@
     .script-piece + .script-piece{border-top:1px solid var(--line);padding-top:24px}
     .script-piece h3{font-size:19px;margin:0 0 9px}
     .script-piece p{margin:0;color:var(--muted)}
+    #talk{padding:54px 0 58px}
+    #talk .section-head{grid-template-columns:.66fr 1.34fr;gap:36px;margin-bottom:28px}
+    #talk .method-banner{padding:18px 28px;margin-bottom:22px}
+    #talk .method-banner strong{font-size:22px}
+    #talk .scripts{grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr);gap:24px}
+    #talk .script-main,#talk .script-side{padding:26px 30px}
+    #talk .script-title{margin-bottom:12px}
+    #talk .quote{font-size:18px;line-height:1.65}
+    #talk .script-side{gap:16px}
+    #talk .script-piece + .script-piece{padding-top:16px}
+    #talk .script-piece h3{font-size:18px;margin-bottom:6px}
+    #talk .script-piece p{font-size:16px;line-height:1.55}
     .guard{background:#e1f5f1;color:var(--ink);border-top:1px solid #c6e9e2;border-bottom:1px solid #c6e9e2}
     .guard .kicker{color:#2f8c98}
     .guard .section-desc{color:#587487}
@@ -104,8 +116,8 @@
     .footer{padding:34px 0 46px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
     .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     @media(max-width:860px){
-      .nav-links{display:none}.section-head,.scripts,.guard-grid{grid-template-columns:1fr}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero{min-height:auto}section{padding:70px 0}}
-    @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.week,.script-main,.script-side,.privacy,.purpose-block{padding:24px}.method-banner{align-items:flex-start;flex-direction:column}.print-btn{display:none}}
+      .nav-links{display:none}.section-head,.scripts,.guard-grid,#talk .section-head,#talk .scripts{grid-template-columns:1fr}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero{min-height:auto}section,#talk{padding:70px 0}}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.week,.script-main,.script-side,#talk .script-main,#talk .script-side,.privacy,.purpose-block{padding:24px}.method-banner{align-items:flex-start;flex-direction:column}.print-btn{display:none}}
     @media print{.nav,.jobs-tools{display:none}.hero{min-height:auto}.hero-grid{padding:48px 0}section{padding:46px 0;break-inside:avoid}.guard{-webkit-print-color-adjust:exact;print-color-adjust:exact}.table-wrap{box-shadow:none;overflow:visible}th{position:static}}
   </style>
 </head>
