@@ -43,6 +43,8 @@
     .period{display:inline-flex;margin-top:18px;padding:10px 16px;border:1px solid #bcdedb;border-radius:999px;color:var(--ink);background:rgba(255,255,255,.62);font-weight:700}
     section{padding:92px 0}
     .section-head{display:grid;grid-template-columns:.72fr 1.28fr;gap:50px;margin-bottom:44px;align-items:end}
+    #purpose .section-head{grid-template-columns:1fr}
+    #purpose h2{white-space:nowrap}
     .kicker{font-size:14px;font-weight:800;color:var(--blue);letter-spacing:.12em;margin-bottom:10px}
     h2{font-size:clamp(32px,4vw,52px);line-height:1.15;margin:0;letter-spacing:-.03em}
     .section-desc{font-size:19px;color:var(--muted);margin:0;max-width:720px}
@@ -139,7 +141,7 @@
     .footer{padding:34px 0 46px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
     .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     @media(max-width:860px){
-      .nav-links{display:none}.section-head,.scripts,.guard-grid,#talk .section-head,#talk .scripts,.reward-grid,.reward-split{grid-template-columns:1fr}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero,.reward,.summary{min-height:auto}.summary-path{grid-template-columns:1fr;max-width:520px}.summary-arrow{transform:rotate(90deg)}section,#talk{padding:70px 0}}
+      .nav-links{display:none}.section-head,.scripts,.guard-grid,#talk .section-head,#talk .scripts,.reward-grid,.reward-split{grid-template-columns:1fr}#purpose h2{white-space:normal}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero,.reward,.summary{min-height:auto}.summary-path{grid-template-columns:1fr;max-width:520px}.summary-arrow{transform:rotate(90deg)}section,#talk{padding:70px 0}}
     @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.week,.script-main,.script-side,#talk .script-main,#talk .script-side,.privacy,.purpose-block,.reward-panel{padding:24px}.method-banner{align-items:flex-start;flex-direction:column}.summary-path{margin-top:36px}.print-btn{display:none}}
     @media print{
       @page{size:A4 landscape;margin:0}
@@ -180,7 +182,6 @@
       <div class="wrap">
         <div class="section-head">
           <div><div class="kicker">01 项目目的</div><h2>链接核心骨干，盘点优质人才</h2></div>
-          <p class="section-desc">通过链接主管及以上的核心骨干人群，盘点大家朋友圈的优质人才资源，邀请加入探迹的各个业务板块。推荐人可通过“便捷推荐”和“HR定点深度跟进”，提升内推的有效转化。</p>
         </div>
         <div class="purpose-flow">
           <div class="purpose-block"><div class="num">STEP 01</div><h3>链接核心骨干</h3><p>重点触达主管及以上的核心骨干人群，建立推荐连接。</p></div>
