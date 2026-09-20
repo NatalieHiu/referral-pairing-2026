@@ -157,6 +157,15 @@
       #purpose .flow-mark{transform:none;height:auto}
       #purpose .purpose-block{padding:24px}
       #purpose .purpose-block h3{font-size:22px}
+      .timeline{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .week + .week{border-left:1px solid var(--line);border-top:0}
+      .week{padding:28px 24px}
+      #talk .scripts{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}
+      .guard-grid{grid-template-columns:.8fr 1.2fr}
+      .reward-grid{grid-template-columns:.88fr 1.12fr}
+      .reward-split{grid-template-columns:1fr 1fr}
+      .privacy-row{grid-template-columns:140px 1fr}
+      #actions .timeline,#talk .scripts,#guard .guard-grid,#reward .reward-grid{break-inside:avoid;page-break-inside:avoid}
       section,#talk{padding-top:18mm;padding-bottom:18mm}
       .table-wrap{box-shadow:none;overflow:visible}
       th{position:static}
