@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>内推结对子项目宣贯</title>
-  <meta name="description" content="内推结对子项目目的、阶段动作、沟通话术、保密注意事项与重点职位清单。">
+  <meta name="description" content="内推结对子项目目的、阶段动作、沟通话术、保密注意事项、重点职位清单与项目激励。">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1739'/%3E%3Ccircle cx='22' cy='24' r='8' fill='%23a9f04d'/%3E%3Ccircle cx='43' cy='39' r='8' fill='%235ee7f7'/%3E%3Cpath d='M27 29l10 7' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
   <style>
     :root {
@@ -113,11 +113,33 @@
     tbody tr:last-child td{border-bottom:0}
     .dept{font-weight:800;color:var(--ink)}
     .tag{display:inline-block;border-radius:999px;padding:4px 9px;background:#eaf0ff;color:#3159be;font-size:13px;font-weight:700}
+    .reward{min-height:calc(100vh - 64px);display:grid;align-items:center;background:linear-gradient(135deg,#f1ffe3 0%,#effcff 58%,#eef4ff 100%);border-top:1px solid #d8ead0;border-bottom:1px solid #d8e7ef}
+    .reward-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:56px;align-items:center}
+    .reward-role{display:inline-flex;padding:8px 13px;border-radius:999px;background:var(--ink);color:white;font-size:14px;font-weight:900;letter-spacing:.08em}
+    .reward-copy h2{margin:18px 0 20px;max-width:600px}
+    .reward-copy p{margin:0;max-width:580px;color:var(--ink-2);font-size:20px;line-height:1.75}
+    .reward-panel{background:white;border:1px solid #d9e5ec;border-radius:30px;padding:42px;box-shadow:var(--shadow)}
+    .reward-number{font-size:clamp(88px,12vw,156px);font-weight:900;line-height:.9;letter-spacing:-.07em;color:var(--blue)}
+    .reward-label{margin:18px 0 30px;color:var(--ink);font-size:21px;font-weight:800}
+    .reward-split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .reward-item{padding:18px;border-radius:18px;background:#f3f8ff;border:1px solid #e0e8f3}
+    .reward-item b{display:block;margin-bottom:5px;color:var(--blue);font-size:14px}
+    .reward-item span{font-size:17px;font-weight:800;color:var(--ink)}
+    .reward-note{margin-top:16px;padding:14px 18px;border-radius:16px;background:#eaf9d8;color:#355b10;font-weight:800}
+    .summary{min-height:calc(100vh - 64px);display:grid;align-items:center;background:var(--ink);color:white}
+    .summary .kicker{color:var(--cyan)}
+    .summary-inner{text-align:center;max-width:1100px;margin:0 auto}
+    .summary-inner h2{font-size:clamp(34px,4vw,56px);margin-bottom:34px}
+    .summary-sentence{font-size:clamp(30px,4.4vw,58px);line-height:1.38;letter-spacing:-.035em;font-weight:900;margin:0 auto;max-width:1080px}
+    .summary-sentence em{color:var(--lime);font-style:normal}
+    .summary-path{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:18px;align-items:center;max-width:880px;margin:52px auto 0}
+    .summary-step{padding:14px 18px;border:1px solid rgba(255,255,255,.22);border-radius:999px;background:rgba(255,255,255,.07);font-weight:800}
+    .summary-arrow{color:var(--cyan);font-size:24px;font-weight:900}
     .footer{padding:34px 0 46px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
     .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     @media(max-width:860px){
-      .nav-links{display:none}.section-head,.scripts,.guard-grid,#talk .section-head,#talk .scripts{grid-template-columns:1fr}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero{min-height:auto}section,#talk{padding:70px 0}}
-    @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.week,.script-main,.script-side,#talk .script-main,#talk .script-side,.privacy,.purpose-block{padding:24px}.method-banner{align-items:flex-start;flex-direction:column}.print-btn{display:none}}
+      .nav-links{display:none}.section-head,.scripts,.guard-grid,#talk .section-head,#talk .scripts,.reward-grid,.reward-split{grid-template-columns:1fr}.purpose-flow{grid-template-columns:1fr}.flow-mark{transform:rotate(90deg);height:44px}.timeline{grid-template-columns:1fr}.week + .week{border-left:0;border-top:1px solid var(--line)}.privacy-row{grid-template-columns:1fr}.hero,.reward,.summary{min-height:auto}.summary-path{grid-template-columns:1fr;max-width:520px}.summary-arrow{transform:rotate(90deg)}section,#talk{padding:70px 0}}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.week,.script-main,.script-side,#talk .script-main,#talk .script-side,.privacy,.purpose-block,.reward-panel{padding:24px}.method-banner{align-items:flex-start;flex-direction:column}.summary-path{margin-top:36px}.print-btn{display:none}}
     @media print{.nav,.jobs-tools{display:none}.hero{min-height:auto}.hero-grid{padding:48px 0}section{padding:46px 0;break-inside:avoid}.guard{-webkit-print-color-adjust:exact;print-color-adjust:exact}.table-wrap{box-shadow:none;overflow:visible}th{position:static}}
   </style>
 </head>
@@ -125,7 +147,7 @@
   <nav class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="#top">内推结对子项目</a>
-      <div class="nav-links"><a href="#purpose">项目目的</a><a href="#actions">两周动作</a><a href="#talk">沟通话术</a><a href="#guard">注意事项</a><a href="#jobs">职位List</a></div>
+      <div class="nav-links"><a href="#purpose">项目目的</a><a href="#actions">具体规划</a><a href="#talk">沟通话术</a><a href="#guard">注意事项</a><a href="#jobs">职位List</a><a href="#reward">项目激励</a><a href="#summary">一句话</a></div>
       <button class="print-btn" type="button" onclick="window.print()">打印 / 导出PDF</button>
     </div>
   </nav>
@@ -255,6 +277,39 @@
             <thead><tr><th>部门 / 主体</th><th>岗位类型</th><th>岗位名称</th><th>城市 / 区域</th></tr></thead>
             <tbody id="jobRows"></tbody>
           </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="reward" id="reward">
+      <div class="wrap reward-grid">
+        <div class="reward-copy">
+          <div class="kicker">06 项目激励</div>
+          <span class="reward-role">P6 / M1 及以上</span>
+          <h2>推进高阶人选入职<br>共享内推入职激励</h2>
+          <p>结对推进的人选成功办理入职后，结对跟进的HR/BP可获得该人选内推入职奖金的40%。</p>
+        </div>
+        <div class="reward-panel">
+          <div class="reward-number">40%</div>
+          <div class="reward-label">HR/BP获得的内推入职奖金比例</div>
+          <div class="reward-split">
+            <div class="reward-item"><b>参与分配</b><span>内推入职奖金</span></div>
+            <div class="reward-item"><b>推荐人领取</b><span>入职奖金60%＋转正奖金100%</span></div>
+          </div>
+          <div class="reward-note">仅分入职奖金部分，转正奖金由推荐人全额领取。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="summary" id="summary">
+      <div class="wrap summary-inner">
+        <div class="kicker">07 一句话总结</div>
+        <h2>HR要做的事</h2>
+        <p class="summary-sentence">通过结对子链接重点主管和销冠，获取他们认可的<em>高潜人才线索与联系方式</em>，并持续推进岗位匹配和招聘转化。</p>
+        <div class="summary-path" aria-label="项目动作路径">
+          <div class="summary-step">链接重点人群</div><div class="summary-arrow">→</div>
+          <div class="summary-step">获取高潜线索</div><div class="summary-arrow">→</div>
+          <div class="summary-step">推进招聘转化</div>
         </div>
       </div>
     </section>
