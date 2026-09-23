@@ -380,7 +380,7 @@
           </table>
         </div>
         <div class="portal-qr">
-          <img src="assets/qr-referral-portal.png" alt="内推门户二维码" loading="lazy">
+          <img src="assets/qr-referral-portal.png" alt="内推门户二维码" loading="eager">
           <div><strong>更多内推职位</strong><span>扫码查看完整职位列表</span></div>
         </div>
       </div>
@@ -426,7 +426,7 @@
     function render(){
       const q = search.value.trim().toLowerCase();
       const filtered = jobs.filter(job => (!q || job.join(' ').toLowerCase().includes(q)) && (!department.value || job[0]===department.value) && (!type.value || job[1]===type.value));
-      rows.innerHTML = filtered.map(job => `<tr><td><span class="tag">${job[1]}</span></td><td>${job[2]}</td><td class="dept">${job[0]}</td><td>${job[3]}</td><td>${job[4] ? `<img class="job-qr" src="${job[4]}" alt="" loading="lazy">` : ''}</td></tr>`).join('');
+      rows.innerHTML = filtered.map(job => `<tr><td><span class="tag">${job[1]}</span></td><td>${job[2]}</td><td class="dept">${job[0]}</td><td>${job[3]}</td><td>${job[4] ? `<img class="job-qr" src="${job[4]}" alt="" loading="eager">` : ''}</td></tr>`).join('');
       count.textContent = `${filtered.length}个岗位`;
     }
     [search,department,type].forEach(el => el.addEventListener('input',render));
