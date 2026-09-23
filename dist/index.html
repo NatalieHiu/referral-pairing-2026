@@ -118,6 +118,10 @@
     .dept{font-weight:800;color:var(--ink)}
     .tag{display:inline-block;border-radius:999px;padding:4px 9px;background:#eaf0ff;color:#3159be;font-size:13px;font-weight:700}
     .job-qr{display:block;width:84px;height:84px;object-fit:contain;border-radius:8px;background:#fff}
+    .portal-qr{display:flex;align-items:center;justify-content:center;gap:22px;margin:24px auto 0;padding:18px 24px;width:min(100%,560px);border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow)}
+    .portal-qr img{display:block;width:112px;height:112px;object-fit:contain;background:#fff}
+    .portal-qr strong{display:block;color:var(--ink);font-size:20px;line-height:1.35}
+    .portal-qr span{display:block;margin-top:6px;color:var(--muted);font-size:16px;line-height:1.45}
     .reward{min-height:calc(100vh - 64px);display:grid;align-items:center;background:linear-gradient(135deg,#f1ffe3 0%,#effcff 58%,#eef4ff 100%);border-top:1px solid #d8ead0;border-bottom:1px solid #d8e7ef}
     .reward-grid{display:block}
     .reward-role{display:inline-flex;padding:8px 13px;border-radius:999px;background:var(--ink);color:white;font-size:14px;font-weight:900;letter-spacing:.08em}
@@ -374,6 +378,10 @@
             <thead><tr><th>岗位类型</th><th>岗位名称</th><th>部门 / 主体</th><th>城市 / 区域</th><th>职位二维码</th></tr></thead>
             <tbody id="jobRows"></tbody>
           </table>
+        </div>
+        <div class="portal-qr">
+          <img src="assets/qr-referral-portal.png" alt="内推门户二维码" loading="lazy">
+          <div><strong>更多内推职位</strong><span>扫码查看完整职位列表</span></div>
         </div>
       </div>
     </section>
