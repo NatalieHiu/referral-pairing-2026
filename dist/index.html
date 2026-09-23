@@ -117,6 +117,7 @@
     tbody tr:last-child td{border-bottom:0}
     .dept{font-weight:800;color:var(--ink)}
     .tag{display:inline-block;border-radius:999px;padding:4px 9px;background:#eaf0ff;color:#3159be;font-size:13px;font-weight:700}
+    .job-qr{display:block;width:84px;height:84px;object-fit:contain;border-radius:8px;background:#fff}
     .reward{min-height:calc(100vh - 64px);display:grid;align-items:center;background:linear-gradient(135deg,#f1ffe3 0%,#effcff 58%,#eef4ff 100%);border-top:1px solid #d8ead0;border-bottom:1px solid #d8e7ef}
     .reward-grid{display:block}
     .reward-role{display:inline-flex;padding:8px 13px;border-radius:999px;background:var(--ink);color:white;font-size:14px;font-weight:900;letter-spacing:.08em}
@@ -370,7 +371,7 @@
         </div>
         <div class="table-wrap">
           <table>
-            <thead><tr><th>岗位类型</th><th>岗位名称</th><th>部门 / 主体</th><th>城市 / 区域</th></tr></thead>
+            <thead><tr><th>岗位类型</th><th>岗位名称</th><th>部门 / 主体</th><th>城市 / 区域</th><th>职位二维码</th></tr></thead>
             <tbody id="jobRows"></tbody>
           </table>
         </div>
@@ -391,7 +392,7 @@
       ['产研-探域','产研类','后端开发工程师','广州'],
       ['产研-探域','产研类','前端开发工程师','广州'],
       ['产研-探域','产研类','AI产品经理','广州'],
-      ['产研-探域','产研类','AIGC设计师','广州'],
+      ['产研-探域','产研类','AIGC设计师','广州','assets/qr-aigc-designer.png'],
       ['产研-探域','产研类','运维工程师','广州'],
       ['产业招商','中台类','AI产业解决方案经理','广州'],
       ['总经办','职能类','公共事务负责人','广州'],
@@ -402,7 +403,7 @@
       ['探迹智能','销售类','商务BD','广州'],
       ['探域','销售类','销售主管','宁波/佛山'],
       ['汉数','销售类','客户经理','广州'],
-      ['探讯','销售类','通信采购','广州'],
+      ['探讯','销售类','国际通信采购','广州','assets/qr-international-communication-procurement.png'],
       ['探讯','销售类','通信销售','广州']
     ];
     const rows = document.querySelector('#jobRows');
@@ -416,7 +417,7 @@
     function render(){
       const q = search.value.trim().toLowerCase();
       const filtered = jobs.filter(job => (!q || job.join(' ').toLowerCase().includes(q)) && (!department.value || job[0]===department.value) && (!type.value || job[1]===type.value));
-      rows.innerHTML = filtered.map(job => `<tr><td><span class="tag">${job[1]}</span></td><td>${job[2]}</td><td class="dept">${job[0]}</td><td>${job[3]}</td></tr>`).join('');
+      rows.innerHTML = filtered.map(job => `<tr><td><span class="tag">${job[1]}</span></td><td>${job[2]}</td><td class="dept">${job[0]}</td><td>${job[3]}</td><td>${job[4] ? `<img class="job-qr" src="${job[4]}" alt="" loading="lazy">` : ''}</td></tr>`).join('');
       count.textContent = `${filtered.length}个岗位`;
     }
     [search,department,type].forEach(el => el.addEventListener('input',render));
