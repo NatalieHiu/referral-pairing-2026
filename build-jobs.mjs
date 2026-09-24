@@ -26,7 +26,7 @@ document.querySelector('#print').addEventListener('click', async () => {
   } catch { alert('二维码加载失败，请刷新页面后重试。'); }
   finally { button.disabled = false; }
 });`;
-const html = `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>内推职位列表</title><style>${css}</style></head><body><div class="toolbar"><span>导出当前筛选结果；保留配色请勾选“背景图形”</span><button id="print" type="button">打印 / 导出 PDF</button></div><main>${section}</main><script>${script}\n${printScript}</script></body></html>`;
+const html = `<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>内部推荐职位列表（扫码查看JD）</title><meta property="og:title" content="内部推荐职位列表（扫码查看JD）"><meta property="og:type" content="website"><meta name="description" content="浏览内部推荐职位，扫描二维码查看职位JD。支持筛选与打印导出PDF。"><meta property="og:description" content="浏览内部推荐职位，扫描二维码查看职位JD。支持筛选与打印导出PDF。"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="内部推荐职位列表（扫码查看JD）"><style>${css}</style></head><body><div class="toolbar"><span>导出当前筛选结果；保留配色请勾选“背景图形”</span><button id="print" type="button">打印 / 导出 PDF</button></div><main>${section}</main><script>${script}\n${printScript}</script></body></html>`;
 new vm.Script(script + printScript);
 await fs.writeFile(new URL('./dist/jobs.html', import.meta.url), html);
 console.log(`Created standalone jobs.html: ${jobs.length} jobs, ${jobs.length + 1} embedded QR images`);
